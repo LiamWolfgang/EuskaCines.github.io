@@ -4,6 +4,7 @@
     flex-direction: column;
     width: 100%;
     flex-basis: 10rem;
+    gap: 2rem;
 }
 .carousel__title{
     color: var(--colorThree);
@@ -29,11 +30,10 @@
 .carousel__content{
     height: auto;
     width: 25rem;
-    background-color: aliceblue;
     display: flex;
     overflow: hidden;
     justify-content:flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
     justify-content: flex-start;
 }
@@ -60,7 +60,6 @@
     }
     .carousel__content{
         width: 35rem;
-        gap:5rem;
     }
     .carousel__title{
         font-size: 2rem;
