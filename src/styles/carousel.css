@@ -15,25 +15,26 @@
     border-bottom: 1px solid var(--colorTwo);
     font-size: 1.5rem;
 }
-@keyframes slidy--2 {
-    0% { transform: translateX(0); }             
-    20% { transform: translateX(0); }                     
-    25% { transform: translateX(-14rem); }          
-    45% { transform: translateX(-14rem); }                
-    50% { transform: translateX(-28rem); }          
-    70% { transform: translateX(-28rem); }                
-    75% { transform: translateX(-28rem); }         
-    100% { transform: translateX(0); }   
+@keyframes slidy--3 {
+    0% { transform: translateX(0); }            /* Inicio en el punto original */
+    20% { transform: translateX(0); }           /* Mantiene la posición por un tiempo */
+    25% { transform: translateX(-25rem); }      /* Se mueve hacia la izquierda (-25rem) */
+    45% { transform: translateX(-25rem); }      /* Mantiene la posición desplazada por un tiempo */
+    50% { transform: translateX(-25rem); }      /* Asegura que se mantenga en esta posición */
+    75% { transform: translateX(0); }           /* Regresa a la posición original */
+    100% { transform: translateX(0); }          /* Finaliza la vuelta en el punto original */
 }
+
 
 
 .carousel__content{
     height: auto;
     width: 25rem;
+    background-color: aliceblue;
     display: flex;
     overflow: hidden;
     justify-content:flex-start;
-    gap: 5rem;
+    gap: 1rem;
     justify-content: center;
     justify-content: flex-start;
 }
@@ -47,9 +48,9 @@
 }
 .carousel__card{
     height: auto;
-    flex-basis:9rem;
+    flex-basis:11.5rem;
     flex-shrink: 0;
-    animation: slidy--2  10s  infinite;
+    animation: slidy--3  10s  infinite;
 }
 
 
@@ -68,7 +69,7 @@
     .carousel__card{
         flex-basis:15rem;
     }
-    @keyframes slidy--2 {
+    @keyframes slidy--3 {
         0% { transform: translateX(0); }                    
         20% { transform: translateX(0); }                    
         25% { transform: translateX(-20rem); }               
